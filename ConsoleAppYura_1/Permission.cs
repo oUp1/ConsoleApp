@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ConsoleAppYura_1
+﻿namespace ConsoleAppYura_1
 {
     public class Permission
     {

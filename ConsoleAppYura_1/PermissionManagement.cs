@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ConsoleAppYura_1
 {
     class PermissionManagement
     {
-        public List<Permission> Permissions { get; set; }
+        public List<Permission> Permissions { get; set; } = new List<Permission>();
+
         public PermissionManagement()
         {
-            Permissions = new List<Permission>();
-
             Permissions.Add(new Permission
             {
                 Id = 1,
@@ -20,38 +18,27 @@ namespace ConsoleAppYura_1
             });
         }
 
-        public Permission GetPermission(int id, PermissionManagement pm)
+        public Permission GetPermission(int id)
         {      
-            var currentPermission = Permissions.FirstOrDefault(permission => permission.Id == id);
-            if (currentPermission == null) currentPermission = Permissions.FirstOrDefault(permission => permission.Id == 1);
-            return currentPermission;
+            return Permissions.FirstOrDefault(permission => permission.Id == id);
         }
 
-        public Permission GetPermissionByName(string n)
+        public Permission GetPermissionByName(string name)
         {
-            return Permissions.FirstOrDefault(permission => permission.Name == n);
+            return Permissions.FirstOrDefault(permission => permission.Name == name);
         }
 
-        public void AddPermission(string name)
+        public void AddPermission(Permission permission)
         {
-            if (!Permissions.Any(x => x.Name == name))
+            var item = GetPermission(permission?.Id ?? 0);
+
+            if (item == null)
             {
-                var countPermission = Permissions.Count();
-                Permissions.Add(new Permission
-                {
-                    Id = countPermission + 1,
-                    Name = name,
-                    ColorIndex = GenerateColorIndex()
-                });
+                Permissions.Add(permission);
             }
         }
 
-        public Permission GetDefaultPermission()
-        {
-            return Permissions.FirstOrDefault();
-        }
-
-        private static int GenerateColorIndex()
+        public int GenerateColorIndex()
         {
             return new Random().Next(0,15);
         }
