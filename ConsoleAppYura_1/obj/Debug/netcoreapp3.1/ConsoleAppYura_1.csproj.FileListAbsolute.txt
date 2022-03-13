@@ -1,0 +1,13 @@
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\bin\Debug\netcoreapp3.1\ConsoleAppYura_1.exe
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\bin\Debug\netcoreapp3.1\ConsoleAppYura_1.deps.json
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\bin\Debug\netcoreapp3.1\ConsoleAppYura_1.runtimeconfig.json
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\bin\Debug\netcoreapp3.1\ConsoleAppYura_1.runtimeconfig.dev.json
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\bin\Debug\netcoreapp3.1\ConsoleAppYura_1.dll
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\bin\Debug\netcoreapp3.1\ConsoleAppYura_1.pdb
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\obj\Debug\netcoreapp3.1\ConsoleAppYura_1.csprojAssemblyReference.cache
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\obj\Debug\netcoreapp3.1\ConsoleAppYura_1.AssemblyInfoInputs.cache
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\obj\Debug\netcoreapp3.1\ConsoleAppYura_1.AssemblyInfo.cs
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\obj\Debug\netcoreapp3.1\ConsoleAppYura_1.csproj.CoreCompileInputs.cache
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\obj\Debug\netcoreapp3.1\ConsoleAppYura_1.dll
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\obj\Debug\netcoreapp3.1\ConsoleAppYura_1.pdb
+C:\Users\bsssb\source\yura_repos\ConsoleAppYura_1\ConsoleAppYura_1\obj\Debug\netcoreapp3.1\ConsoleAppYura_1.genruntimeconfig.cache
