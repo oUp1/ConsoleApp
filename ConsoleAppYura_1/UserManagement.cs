@@ -1,50 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace ConsoleAppYura_1
 {
     class UserManagement
     {
-        private List<User> Users { get; set; }
-        private PermissionManagement PermissionManagement { get; set; }
+        private PermissionManagement PermissionManagement { get; set; } = new PermissionManagement();
+        public List<User> Users { get; set; } = new List<User>();
 
         public UserManagement()
         {
-            PermissionManagement = new PermissionManagement();
-            Users = new List<User>();
             Users.Add(new User
             {
-                Id = new System.Guid(),
+                Id = Users.Count + 1,
                 Name = "admin",
                 Password = "admin",
-                Permission = PermissionManagement.GetDefaultPermission()
+                Permission = PermissionManagement.Permissions.FirstOrDefault()
             });
         }
-        public object GetUserById(Guid gid)
+        public User GetUser(int id)
         {
-            return Users.First(x => x.Id == gid);
+            return Users.FirstOrDefault(x => x.Id == id);
         }
-        public object GetUserByName(string n)
+        public object GetUserByName(string name)
         {
-            return Users.First(x => x.Name == n);
+            return Users.First(x => x.Name == name);
         }
-        public void AddUser(string name, string password, int permissionId, PermissionManagement pm)
+        public void AddUser(User user)
         {
-            if (!Users.Any(x => (x.Name == name && x.Password == password)))
+            var item = GetUser(user?.Id ?? 0);
+
+            if(item != null)
             {
-                Users.Add(new User
-                {
-                    Id = new System.Guid(),
-                    Name = name,
-                    Password = password,
-                    Permission = pm.GetPermission(permissionId, pm),
-                });
+                Users.Add(user);
             }
         }
         public User AuthorizeUser(string name, string password)
         {
-            return Users.FirstOrDefault(x => (x.Name == name && x.Password == password));
+            return Users.FirstOrDefault(x => x.Name == name && x.Password == password);
         }
     }
 }
